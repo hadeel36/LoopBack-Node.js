@@ -1,0 +1,33 @@
+{
+  "name": "Applications",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "fields": {
+      "type": [
+        "any"
+      ],
+      "properties": {
+        "name": {
+          "type": "string",
+          "required": true
+        },
+        "type": {
+          "type": "any",
+          "required": true
+        }
+      },
+      "required": true
+    }
+  },
+  "mixins": {
+    "TimeStamp": true
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}
