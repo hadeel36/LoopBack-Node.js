@@ -38,19 +38,19 @@
     "public": false
   },
   "Users": {
-    "dataSource": "db",
+    "dataSource": "Mongodb",
     "public": true
   },
   "Programs": {
-    "dataSource": "db",
+    "dataSource": "Mongodb",
     "public": true
   },
   "Applications": {
-    "dataSource": "db",
+    "dataSource": "Mongodb",
     "public": true
   },
   "SubmittedApplications": {
-    "dataSource": "db",
+    "dataSource": "Mongodb",
     "public": true
   }
 }
