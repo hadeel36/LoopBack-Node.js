@@ -5,6 +5,9 @@
   "options": {
     "validateUpsert": true
   },
+  "mixins": {
+    "TimeStamp": true
+  },
   "properties": {
     "title": {
       "type": "string",
@@ -13,13 +16,19 @@
     "about": {
       "type": "string",
       "required": true
+    },
+    "application_id": {
+      "type": "string"
     }
   },
-  "mixins": {
-    "TimeStamp": true
-  },
   "validations": [],
-  "relations": {},
+  "relations": {
+    "application": {
+      "type": "hasOne",
+      "model": "Applications",
+      "foreignKey": "application_id"
+    }
+  },
   "acls": [],
   "methods": {}
 }

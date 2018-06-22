@@ -5,11 +5,15 @@
   "options": {
     "validateUpsert": true
   },
+  "mixins": {
+    "TimeStamp": true
+  },
   "properties": {
     "fields": {
       "type": [
         "any"
       ],
+      "required": true,
       "properties": {
         "name": {
           "type": "string",
@@ -19,15 +23,20 @@
           "type": "any",
           "required": true
         }
-      },
-      "required": true
+      }
+    },
+    "program_id": {
+      "type": "string"
     }
   },
-  "mixins": {
-    "TimeStamp": true
-  },
   "validations": [],
-  "relations": {},
+  "relations": {
+    "program": {
+      "type": "belongsTo",
+      "model": "Programs",
+      "foreignKey": "program_id"
+    }
+  },
   "acls": [],
   "methods": {}
 }
